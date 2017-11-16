@@ -255,16 +255,15 @@
         $(this).css("background-color", "#8adba5");},function(){
             $(this).css("background-color", "white");
         });
+
     $("#sub").click(function(){
         var x=$("#text").text();
           
-        var lis=JSON.stringify(x);
+        var typed_question=JSON.stringify(x);
         $.ajax({
-        url: "",
+        url: "http://127.0.0.1:8000/",
         method: 'GET', // or another (GET), whatever you need
-        data: lis, // data you need to pass to your function
-           // click: True
-        
+        data: {"typed_question": typed_question},
         success: function (data) { 
         //var op=JSON.stringify({{foo}});
         //var op={{foo}}
@@ -273,17 +272,10 @@
         console.log("done");
             // success callback
             // you can process data returned by function from views.py
-           
-            
-
         }
     });
-
-            
           //$ajax
     });
-
-    
 });
 </script>
 </html>

@@ -23,7 +23,5 @@ urlpatterns = [
 ]
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^json/$', views.returnjson, name='returnjson'),
 ]
-
-
-
