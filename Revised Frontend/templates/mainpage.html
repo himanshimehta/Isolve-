@@ -29,11 +29,13 @@
                }); 
          $(document).on('click','#si', function(e){
                e.preventDefault();
-               $(".replace").replaceWith('<div class="replace"> <div class="row" id="siexamples"> <div class="text-center col-lg-12"> <table class="table table-bordered table-hover"> <thead> <tr id="tableheader"> <th class="text-center">Simple Interest Examples</th> </tr> </thead> <tbody> <tr id="example1" style="height:80px;overflow:hidden;cursor:pointer"> <td>What sum of money will earn an interest of $162 in 3 years at the rate of 12% per annum?</td> </tr> <tr id="example2" style="height:80px;overflow:hidden;cursor:pointer"> <td>How much time will it take for an amount of $900 to yield $81 as interest at 4.5% per annum of simple interest?</td> </tr> <tr id="example3" style="height:80px;overflow:hidden;cursor:pointer"> <td>A sum fetched a total simple interest of $929.20 at the rate of 8% in 5 years. What is the sum?</td> </tr> <tr id="example4" style="height:80px;overflow:hidden;cursor:pointer"> <td>$10,000 is invested at 5% interest rate in 1 year. Find the interest.</td> </tr> <tr id="example5" style="height:80px;overflow:hidden;cursor:pointer"> <td>$3,500 is given at 7% p.a. rate of interest. Find the interest which will be received at the end of two years.</td> </tr> <tr id="example6" style="height:80px;overflow:hidden;cursor:pointer"> <td>If Manohar pays an interest of $750 for 2 years on a sum of $4,500, find the rate of interest.</td> </tr> </tbody> </table> </div> </div> </div>');
+               $(".replace").replaceWith('<div class="replace"> <div class="row" id="siexamples"> <div class="text-center col-lg-12"> <table class="table table-bordered table-hover"> <thead> <tr id="tableheader"> <th class="text-center">Simple Interest Examples</th> </tr> </thead> <tbody> <tr id="example1" style="height:80px;overflow:hidden;cursor:pointer"> <td>What sum of money will earn an interest of $162 in 3 years at the rate of 12% per annum?</td> </tr> <tr id="example2" style="height:80px;overflow:hidden;cursor:pointer"> <td>How much time will it take for an amount of $900 to yield $81 as interest at 4.5% per annum of simple interest?</td> </tr> <tr id="example3" style="height:80px;overflow:hidden;cursor:pointer"> <td>A sum fetched a total simple interest of $929.20 at the rate of 8% in 5 years. What is the sum?</td> </tr> <tr id="example4" style="height:80px;overflow:hidden;cursor:pointer"> <td>$10,000 is invested at 5% interest rate in 1 year. Find the interest.</td> </tr> <tr id="example5" style="height:80px;overflow:hidden;cursor:pointer"> <td>$3,500 is given at 7% p.a. rate of interest. Find the interest which will be received at the end of one year.</td> </tr> <tr id="example6" style="height:80px;overflow:hidden;cursor:pointer"> <td>If Manohar pays an interest of $750 for 2 years on a sum of $4,500, find the rate of interest.</td> </tr> </tbody> </table> </div> </div> </div>');
+               $("#unique").attr("action","http://127.0.0.1:5000/sipred");
          });
          $(document).on('click','#op', function(e){
                e.preventDefault();
                $(".replace").replaceWith('<div class="replace"> <div class="row" id="opexamples"> <div class="text-center col-lg-12"> <table class="table table-bordered table-hover"> <thead> <tr id="tableheader"> <th class="text-center">Operation Prediction Examples</th> </tr> </thead> <tbody> <tr id="example1" style="height:80px;overflow:hidden;cursor:pointer"> <td>Joan found 70 seashells on the beach. She gave Sam some of her seashells. She now has 27 seashells. How many seashells did she give to Sam?</td> </tr> <tr id="example2" style="height:80px;overflow:hidden;cursor:pointer"> <td>There were 28 bales of hay in the barn. Tim stacked some bales in the barn today. There are now 54 bales of hay in the barn. How many bales did he store in the barn?</td> </tr> <tr id="example3" style="height:80px;overflow:hidden;cursor:pointer"> <td>Mary is baking a cake. The recipe wants 8 cups of flour. She already put in 2 cups. How many cups does she need to add?</td> </tr> <tr id="example4" style="height:80px;overflow:hidden;cursor:pointer"> <td> Michelle played 12 basketball games this year. They were defeated during 4 games. How many games did they win?</td> </tr> <tr id="example5" style="height:80px;overflow:hidden;cursor:pointer"> <td>John is having $5. Manohar gives to him $7 more. How much does he have now?</td> </tr> <tr id="example6" style="height:80px;overflow:hidden;cursor:pointer"> <td>Sam had 6 apples. He gave 3 apples to Fred. How many apples does Sam have now?</td> </tr> </tbody> </table> </div> </div> </div>');
+               $("#unique").attr("action","http://127.0.0.1:5000/oppred");
          });
       </script>
       <style>
@@ -117,7 +119,7 @@
                   <h3 class="section-subheading text-muted">The Math Word Problem Solver. </h3>
                </div>
             </div>
-            <form action="http://127.0.0.1:5000/test" method="post">
+            <form action="http://127.0.0.1:5000/sipred" method="post" id="unique">
             <div class="row">
                <div class="col-lg-12">
                    <div class="input-group">
@@ -134,7 +136,7 @@
                      </div>
                         <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Enter your question. " autocomplete="off" name="qtest">
                         <span class="input-group-btn">
-                            <input type="submit"class="btn btn-secondary rightb" type="button" value="Go!"></button>
+                            <input type="submit"class="btn btn-secondary rightb" type="button" value="Go!">
                         </span>
                    </div>
                  </div>
@@ -161,10 +163,10 @@
                           <td>A sum fetched a total simple interest of $929.20 at the rate of 8% in 5 years. What is the sum?</td>
                         </tr>
                         <tr style="height: 80px; overflow: hidden; cursor: pointer;" id="example4">
-                          <td>$10,000 is invested at 5% interest rate in 1 year. Find the interest.</td>
+                          <td>$10,000 is invested at 5% interest rate for 1 year. Find the interest.</td>
                         </tr>
                         <tr style="height: 80px; overflow: hidden; cursor: pointer;" id="example5">
-                          <td>$3,500 is given at 7% p.a. rate of interest. Find the interest which will be received at the end of two years.</td>
+                          <td>$3,500 is given at 7% p.a. rate of interest. Find the interest which will be received at the end of one year.</td>
                         </tr>
                         <tr style="height: 80px; overflow: hidden; cursor: pointer;" id="example6">
                           <td>If Manohar pays an interest of $750 for 2 years on a sum of $4,500, find the rate of interest.</td>
