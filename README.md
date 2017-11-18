@@ -19,11 +19,13 @@
    
      ```
      python3
-     >>>> import nltk
-     >>>> nltk.download()
+     >>> import nltk
+     >>> nltk.download()
      ```
 4. Navigate to your "Revised Frontend" folder with your terminal, and start the Flask server with 
    
    `python3 linking.py`.
  
-5. Select your category, and enter your question (or select one from the table of examples). You get an answer. Rejoice!
+5. Open `http://127.0.0.1:5000` in your browser. 
+
+6. Select your category, and enter your question (or select one from the table of examples). You get an answer. Rejoice!
