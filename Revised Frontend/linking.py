@@ -11,8 +11,8 @@ si_page = Template("""
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="">
-      <meta name="author" content="">
+      <meta name="description" content="Solve all your problems!">
+      <meta name="author" content="Siddhartha Khanooja">
       <title>Dilton - A Math Word Problem Solver</title>
       <!-- Bootstrap core CSS -->
       <link href= "/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,11 +40,13 @@ si_page = Template("""
                e.preventDefault();
                $$(".replace").replaceWith('<div class="replace"> <div class="row" id="siexamples"> <div class="text-center col-lg-12"> <table class="table table-bordered table-hover"> <thead> <tr id="tableheader"> <th class="text-center">Simple Interest Examples</th> </tr> </thead> <tbody> <tr id="example1" style="height:80px;overflow:hidden;cursor:pointer"> <td>What sum of money will earn an interest of $$162 in 3 years at the rate of 12% per annum?</td> </tr> <tr id="example2" style="height:80px;overflow:hidden;cursor:pointer"> <td>How much time will it take for an amount of $$900 to yield $$81 as interest at 4.5% per annum of simple interest?</td> </tr> <tr id="example3" style="height:80px;overflow:hidden;cursor:pointer"> <td>A sum fetched a total simple interest of $$929.20 at the rate of 8% per annum in 5 years. What is the sum?</td> </tr> <tr id="example4" style="height:80px;overflow:hidden;cursor:pointer"> <td>$$10,000 is invested at 5% interest rate in 1 year. Find the interest.</td> </tr> <tr id="example5" style="height:80px;overflow:hidden;cursor:pointer"> <td>$$3,500 is given at 7% p.a. rate of interest. Find the interest which will be received at the end of one year.</td> </tr> <tr id="example6" style="height:80px;overflow:hidden;cursor:pointer"> <td>If Manohar pays an interest of $$750 for 2 years on a sum of $$4,500, find the rate of interest.</td> </tr> </tbody> </table> </div> </div> </div>');
                $$("#unique").attr("action","http://127.0.0.1:5000/sipred");
+               $$("#buttontext").text("Simple Interest");
          });
          $$(document).on('click','#op', function(e){
                e.preventDefault();
                $$(".replace").replaceWith('<div class="replace"> <div class="row" id="opexamples"> <div class="text-center col-lg-12"> <table class="table table-bordered table-hover"> <thead> <tr id="tableheader"> <th class="text-center">Operation Prediction Examples</th> </tr> </thead> <tbody> <tr id="example1" style="height:80px;overflow:hidden;cursor:pointer"> <td>Joan found 70 seashells on the beach. She gave Sam some of her seashells. She now has 27 seashells. How many seashells did she give to Sam?</td> </tr> <tr id="example2" style="height:80px;overflow:hidden;cursor:pointer"> <td>There were 28 bales of hay in the barn. Tim stacked some bales in the barn today. There are now 54 bales of hay in the barn. How many bales did he store in the barn?</td> </tr> <tr id="example3" style="height:80px;overflow:hidden;cursor:pointer"> <td>Mary is baking a cake. The recipe wants 8 cups of flour. She already put in 2 cups. How many cups does she need to add?</td> </tr> <tr id="example4" style="height:80px;overflow:hidden;cursor:pointer"> <td> Michelle played 12 basketball games this year. They were defeated during 4 games. How many games did they win?</td> </tr> <tr id="example5" style="height:80px;overflow:hidden;cursor:pointer"> <td>John is having $$5. Manohar gives to him $$7 more. How much does he have now?</td> </tr> <tr id="example6" style="height:80px;overflow:hidden;cursor:pointer"> <td>Sam had 6 apples. He gave 3 apples to Fred. How many apples does Sam have now?</td> </tr> </tbody> </table> </div> </div> </div>');
                $$("#unique").attr("action","http://127.0.0.1:5000/oppred");
+               $$("#buttontext").text("Operation Prediction");
          });
       </script>
       <style>
@@ -133,8 +135,8 @@ si_page = Template("""
                <div class="col-lg-12">
                    <div class="input-group">
                      <div class="input-group-btn">
-                       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         Select your option
+                       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="buttontext>
+                         Select your category
                        </button>
                        <div class="dropdown-menu">
                          <a class="dropdown-item" href="#" id="si">Simple Interest</a>
@@ -453,8 +455,8 @@ op_page = Template("""
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="">
-      <meta name="author" content="">
+      <meta name="description" content="Solve all your problems!">
+      <meta name="author" content="Siddhartha Khanooja">
       <title>Dilton - A Math Word Problem Solver</title>
       <!-- Bootstrap core CSS -->
       <link href= "/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -482,11 +484,14 @@ op_page = Template("""
                e.preventDefault();
                $$(".replace").replaceWith('<div class="replace"> <div class="row" id="siexamples"> <div class="text-center col-lg-12"> <table class="table table-bordered table-hover"> <thead> <tr id="tableheader"> <th class="text-center">Simple Interest Examples</th> </tr> </thead> <tbody> <tr id="example1" style="height:80px;overflow:hidden;cursor:pointer"> <td>What sum of money will earn an interest of $$162 in 3 years at the rate of 12% per annum?</td> </tr> <tr id="example2" style="height:80px;overflow:hidden;cursor:pointer"> <td>How much time will it take for an amount of $$900 to yield $$81 as interest at 4.5% per annum of simple interest?</td> </tr> <tr id="example3" style="height:80px;overflow:hidden;cursor:pointer"> <td>A sum fetched a total simple interest of $$929.20 at the rate of 8% per annum in 5 years. What is the sum?</td> </tr> <tr id="example4" style="height:80px;overflow:hidden;cursor:pointer"> <td>$$10,000 is invested at 5% interest rate in 1 year. Find the interest.</td> </tr> <tr id="example5" style="height:80px;overflow:hidden;cursor:pointer"> <td>$$3,500 is given at 7% p.a. rate of interest. Find the interest which will be received at the end of one year.</td> </tr> <tr id="example6" style="height:80px;overflow:hidden;cursor:pointer"> <td>If Manohar pays an interest of $$750 for 2 years on a sum of $$4,500, find the rate of interest.</td> </tr> </tbody> </table> </div> </div> </div>');
                $$("#unique").attr("action","http://127.0.0.1:5000/sipred");
+               $$("#buttontext").text("Simple Interest");
          });
          $$(document).on('click','#op', function(e){
                e.preventDefault();
                $$(".replace").replaceWith('<div class="replace"> <div class="row" id="opexamples"> <div class="text-center col-lg-12"> <table class="table table-bordered table-hover"> <thead> <tr id="tableheader"> <th class="text-center">Operation Prediction Examples</th> </tr> </thead> <tbody> <tr id="example1" style="height:80px;overflow:hidden;cursor:pointer"> <td>Joan found 70 seashells on the beach. She gave Sam some of her seashells. She now has 27 seashells. How many seashells did she give to Sam?</td> </tr> <tr id="example2" style="height:80px;overflow:hidden;cursor:pointer"> <td>There were 28 bales of hay in the barn. Tim stacked some bales in the barn today. There are now 54 bales of hay in the barn. How many bales did he store in the barn?</td> </tr> <tr id="example3" style="height:80px;overflow:hidden;cursor:pointer"> <td>Mary is baking a cake. The recipe wants 8 cups of flour. She already put in 2 cups. How many cups does she need to add?</td> </tr> <tr id="example4" style="height:80px;overflow:hidden;cursor:pointer"> <td> Michelle played 12 basketball games this year. They were defeated during 4 games. How many games did they win?</td> </tr> <tr id="example5" style="height:80px;overflow:hidden;cursor:pointer"> <td>John is having $$5. Manohar gives to him $$7 more. How much does he have now?</td> </tr> <tr id="example6" style="height:80px;overflow:hidden;cursor:pointer"> <td>Sam had 6 apples. He gave 3 apples to Fred. How many apples does Sam have now?</td> </tr> </tbody> </table> </div> </div> </div>');
                $$("#unique").attr("action","http://127.0.0.1:5000/oppred");
+               $$("#buttontext").text("Operation Prediction");
+
          });
       </script>
       <style>
@@ -575,8 +580,8 @@ op_page = Template("""
                <div class="col-lg-12">
                    <div class="input-group">
                      <div class="input-group-btn">
-                       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         Select your option
+                       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="buttontext">
+                         Select your category
                        </button>
                        <div class="dropdown-menu">
                          <a class="dropdown-item" href="#" id="si">Simple Interest</a>
