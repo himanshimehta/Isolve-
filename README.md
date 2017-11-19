@@ -9,7 +9,7 @@
 3. Download external files:
    - Download dependencies for Stanford POSTagger, and DependencyParser:
    
-     Go to the following link: [Click Me!](https://drive.google.com/drive/folders/1LAyDWhVjL7S6OxW-gXMJmW06YaUAohTc), and     unpack the libs folder in your "Revised Frontend" directory.
+     Go to the following link: [Click Me!](https://drive.google.com/drive/folders/1LAyDWhVjL7S6OxW-gXMJmW06YaUAohTc), and     download & extract the "libs" folder to your "Revised Frontend" directory.
    
    - Download models for Spacy:
    
